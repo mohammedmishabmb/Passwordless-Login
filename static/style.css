@@ -1,0 +1,356 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top left, #1e293b 0, transparent 35%),
+        radial-gradient(circle at bottom right, #0f172a 0, transparent 40%),
+        #020617;
+    color: #e5e7eb;
+}
+
+
+/* ==============================
+   COMMON CONTAINER
+   ============================== */
+
+.container {
+    width: min(420px, 92%);
+    margin: 80px auto;
+    padding: 40px;
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45),
+        0 0 40px rgba(59, 130, 246, 0.08);
+    backdrop-filter: blur(14px);
+}
+
+.container h1 {
+    font-size: 30px;
+    margin-bottom: 12px;
+    color: #f8fafc;
+}
+
+.container p {
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   INPUTS
+   ============================== */
+
+input {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 10px 0;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    background: #0f172a;
+    color: #f8fafc;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+input::placeholder {
+    color: #64748b;
+}
+
+input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 13px 26px;
+    margin: 14px 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.25);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 12px 28px rgba(37, 99, 235, 0.35);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* ==============================
+   LINKS
+   ============================== */
+
+a {
+    color: #93c5fd;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+a:hover {
+    color: #bfdbfe;
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   HOME PAGE
+   ============================== */
+
+.home-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.home-card {
+    width: min(560px, 95%);
+    padding: 55px 45px;
+    background: rgba(15, 23, 42, 0.94);
+    border: 1px solid rgba(96, 165, 250, 0.15);
+    border-radius: 24px;
+    text-align: center;
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+.lock-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, 0.12);
+    border: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+.home-card h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #f8fafc;
+}
+
+.home-card p {
+    color: #94a3b8;
+    margin-bottom: 35px;
+    font-size: 16px;
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.home-buttons button {
+    min-width: 145px;
+}
+
+
+/* ==============================
+   DASHBOARD
+   ============================== */
+
+.dashboard {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.welcome-card {
+    width: min(550px, 95%);
+    padding: 50px;
+    background: rgba(15, 23, 42, 0.94);
+    border: 1px solid rgba(96, 165, 250, 0.15);
+    border-radius: 24px;
+    text-align: center;
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+.security-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 46px;
+    border-radius: 50%;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.welcome-card h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #f8fafc;
+}
+
+.welcome-card > p {
+    color: #94a3b8;
+}
+
+
+/* ==============================
+   AUTHENTICATION STATUS
+   ============================== */
+
+.status {
+    margin: 28px 0;
+    padding: 15px 18px;
+    border-radius: 12px;
+    background: rgba(34, 197, 94, 0.08);
+    border: 1px solid rgba(34, 197, 94, 0.18);
+    color: #86efac;
+    font-size: 14px;
+}
+
+.status span {
+    color: #22c55e;
+    margin-right: 6px;
+}
+
+
+/* ==============================
+   DASHBOARD INFORMATION
+   ============================== */
+
+.info {
+    text-align: left;
+    margin: 25px 0;
+    padding: 20px;
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 12px;
+}
+
+.info p {
+    margin: 12px 0;
+    color: #94a3b8;
+}
+
+.info strong {
+    color: #e2e8f0;
+}
+
+
+/* ==============================
+   RECOVERY / MESSAGE AREA
+   ============================== */
+
+#result,
+#loginResult,
+#recoveryResult {
+    min-height: 24px;
+    margin: 15px 0;
+    color: #93c5fd;
+    font-size: 14px;
+}
+
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* ==============================
+   FILE INPUT
+   ============================== */
+
+input[type="file"] {
+    padding: 10px;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+    border: none;
+    padding: 9px 12px;
+    margin-right: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    color: white;
+    background: #334155;
+}
+
+
+/* ==============================
+   MOBILE RESPONSIVE
+   ============================== */
+
+@media (max-width: 600px) {
+
+    .container {
+        margin: 40px auto;
+        padding: 30px 22px;
+    }
+
+    .home-card {
+        padding: 40px 25px;
+    }
+
+    .home-card h1 {
+        font-size: 28px;
+    }
+
+    .welcome-card {
+        padding: 35px 25px;
+    }
+
+    .welcome-card h1 {
+        font-size: 25px;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+    }
+
+    .home-buttons button {
+        width: 100%;
+    }
+}

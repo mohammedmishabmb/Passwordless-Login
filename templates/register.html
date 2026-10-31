@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Account</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Create Account</h1>
+
+    <p>
+        Create your passwordless account using
+        public-key cryptography.
+    </p>
+
+    <input
+        type="text"
+        id="username"
+        placeholder="Enter username"
+    >
+
+    <button id="registerButton" type="button">
+        Create Account
+    </button>
+
+    <p id="result"></p>
+
+    <div id="backupSection" hidden>
+
+        <h3>Private Key Backup</h3>
+
+        <p>
+            Your private key is required to recover
+            your account if browser data is deleted.
+        </p>
+
+        <button id="downloadButton" type="button">
+            Download Private Key
+        </button>
+
+        <p>
+            ⚠️ Keep this file safe.
+            Anyone who obtains it may be able
+            to authenticate as you.
+        </p>
+
+    </div>
+
+    <a href="/login">
+        Already have an account? Login
+    </a>
+
+</div>
+
+<script src="/static/app.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recover Account</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Recover Account</h1>
+
+    <p>
+        Restore your account using your private-key backup.
+    </p>
+
+    <input
+        type="text"
+        id="recoveryUsername"
+        placeholder="Enter username"
+    >
+
+    <input
+        type="file"
+        id="privateKeyFile"
+        accept=".pem"
+    >
+
+    <button id="recoverButton" type="button">
+        Recover Account
+    </button>
+
+    <p id="recoveryResult"></p>
+
+    <a href="/login">
+        Back to Login
+    </a>
+
+</div>
+
+<script src="/static/app.js" defer></script>
+
+</body>
+</html>

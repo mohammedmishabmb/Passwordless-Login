@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Passwordless Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Passwordless Login</h1>
+
+    <input
+        type="text"
+        id="loginUsername"
+        placeholder="Enter username"
+    >
+
+    <button id="loginButton" type="button">
+        Login
+    </button>
+
+    <p id="loginResult"></p>
+
+    <a href="/recover">
+        Lost your private key?
+    </a>
+
+    <br><br>
+
+    <a href="/register">
+        Create a new account
+    </a>
+
+</div>
+
+<script src="/static/app.js" defer></script>
+
+</body>
+</html>

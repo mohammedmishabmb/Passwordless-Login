@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <div class="welcome-card">
+
+        <div class="security-icon">
+            🔐
+        </div>
+
+        <h1>
+            Welcome back, {{ username }}!
+        </h1>
+
+        <p>
+            You have been authenticated successfully.
+        </p>
+
+        <div class="status">
+            <span>●</span>
+            Passwordless Authentication Successful
+        </div>
+
+        <div class="info">
+
+            <p>
+                <strong>Authentication:</strong>
+                Public-Key Cryptography
+            </p>
+
+            <p>
+                <strong>Method:</strong>
+                RSA-PSS Challenge-Response
+            </p>
+
+            <p>
+                <strong>Status:</strong>
+                Authenticated
+            </p>
+
+        </div>
+
+        <form method="post" action="/logout">
+            <button type="submit">
+                Logout
+            </button>
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
