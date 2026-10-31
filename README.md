@@ -74,7 +74,6 @@ passwordless-auth/
 ├── database.py         # MongoDB access: users, challenges, indexes
 ├── requirements.txt    # Pinned Python dependencies
 ├── .env.example        # Example environment variables
-├── .gitignore
 ├── README.md
 ├── static/
 │   ├── app.js          # Client-side crypto: key generation, signing, IndexedDB, recovery
